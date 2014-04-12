@@ -1,10 +1,18 @@
 
 {
 	"femaleEnglish" : [
-		{"name" : "Penny"},
-		{"name" : "Angelina"},
-		{"name" : "Scarlett"},
-		{"name" : "Natalie"}
+		{"name" : "Kaley Cuoco"},
+		{"name" : "Angelina Jolie"},
+		{"name" : "Scarlett Johansson"},
+		{"name" : "Natalie Portman"},
+		{"name" : "Jennifer Aniston},
+		{"name" : "Cobie Smulders"},
+		{"name" : "Melissa Rauch"},
+		{"name" : "Sunny Leone :P"},
+		{"name" : "Cameroon Diaz"}
+
+
+
 	],
 	"maleEnglish" : [
 
@@ -22,7 +30,15 @@
 		{"name" : ""}
 	],
 	"maleHindi" : [
-		{"name" : ""}
+		{"name" : "Amitabh Bachan"},
+		{"name" : "Boman Irani"},
+		{"name" : "Aamir Khan"},
+		{"name" : "Akshay Kumar"},
+		{"name" : "Salman Khan"},
+		{"name" : "Kapil Sharma"},
+		{"name" : "Sharman Joshi"},
+		{"name" : "Paresh Rawal"}
+
 	]
 	
 }
