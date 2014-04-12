@@ -17,8 +17,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="152dp"
-        android:paddingEnd="150dp"
-        android:minHeight="130dp" />
+        android:minHeight="130dp"
+        android:paddingEnd="70dp"
+
+        android:gravity="center_vertical"
+        android:text="xc"
+         />
 
     <Button
         android:layout_width="wrap_content"
@@ -27,19 +31,21 @@
         android:layout_alignTop="@+id/button1"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:paddingStart="150dp"
-        android:minHeight="130dp" />
+        android:minHeight="130dp"
+        android:gravity="center_vertical"
+        android:paddingStart="70dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
         android:layout_marginTop="38dp"
-        android:paddingEnd="150dp"
         android:minHeight="130dp"
         android:layout_below="@+id/button1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:paddingEnd="70dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -48,8 +54,9 @@
         android:layout_alignTop="@+id/button3"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:paddingStart="150dp"
-        android:minHeight="130dp" />
+        android:gravity="center_vertical"
+        android:minHeight="130dp"
+        android:paddingStart="70dp" />
 
     <TextView
         android:layout_width="wrap_content"
