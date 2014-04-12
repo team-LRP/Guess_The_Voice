@@ -60,11 +60,11 @@ public class MainActivity2 extends Activity {
         try
         {
             JSONObject object = new JSONObject(loadJSONFromAsset());
-            JSONArray femaleEnglish = object.getJSONArray("femaleEnglish");
-            option1 = femaleEnglish.getJSONObject(0).getString("name");
-            option2 = femaleEnglish.getJSONObject(1).getString("name");
-            option3 = femaleEnglish.getJSONObject(2).getString("name");
-            option4 = femaleEnglish.getJSONObject(3).getString("name");
+            JSONArray maleEnglish = object.getJSONArray("maleEnglish");
+            option1 = maleEnglish.getJSONObject(0).getString("name");
+            option2 = maleEnglish.getJSONObject(1).getString("name");
+            option3 = maleEnglish.getJSONObject(2).getString("name");
+            option4 = maleEnglish.getJSONObject(3).getString("name");
 
         } catch (JSONException e) {
             e.printStackTrace();
