@@ -1,0 +1,27 @@
+{
+	"femaleEnglish" : [
+		{"name" : "Penny",},
+		{"name" : "Angelina"},
+		{"name" : "Scarlett"},
+		{"name" : "Natalie"}
+	],
+	"maleEnglish" : [
+		{
+			"name" : "Johnny Depp",
+			"name" : "Bryan Cranston",
+			"name" : "Aaron Paul", 
+			"name" : "Robert Downey Jr",
+			"name" : "Jim Parsons", 
+			"name" : "Neil Patrick Harris",
+			"name" : "Benedict Cumberbatch",
+			"name" : "Heath Ledger"
+	}
+	],
+	"femaleHindi" : [
+		{"name" : ""}
+	],
+	"maleHindi" : [
+		{"name" : ""}
+	]
+	
+}
