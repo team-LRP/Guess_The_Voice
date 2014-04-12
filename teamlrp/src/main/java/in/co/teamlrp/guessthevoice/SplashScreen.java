@@ -18,8 +18,6 @@ public class SplashScreen extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.letsgetstarted);
-        mPlayer.start();
 
 
         super.onCreate(savedInstanceState);
