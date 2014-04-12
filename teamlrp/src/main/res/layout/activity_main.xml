@@ -35,4 +35,12 @@ android:layout_below="@+id/multiplayerbutton"
 android:layout_alignLeft="@+id/multiplayerbutton"
 android:layout_alignStart="@+id/multiplayerbutton"
 android:layout_alignRight="@+id/multiplayerbutton"/>
+
+    <MediaController
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mediaController"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp" />
 </RelativeLayout>
