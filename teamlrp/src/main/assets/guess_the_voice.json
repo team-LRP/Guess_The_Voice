@@ -1,25 +1,7 @@
-<<<<<<< HEAD
+
 {
 	"femaleEnglish" : [
 		{"name" : "Penny"},
-		{"name" : "Angelina"},
-		{"name" : "Scarlett"},
-		{"name" : "Natalie"}
-	],
-	"maleEnglish" : [
-		{"name" : "Johnny Depp"}
-	],
-	"femaleHindi" : [
-		{"name" : ""}
-	],
-	"maleHindi" : [
-		{"name" : ""}
-	]
-	
-=======
-{
-	"femaleEnglish" : [
-		{"name" : "Penny",},
 		{"name" : "Angelina"},
 		{"name" : "Scarlett"},
 		{"name" : "Natalie"}
@@ -43,5 +25,4 @@
 		{"name" : ""}
 	]
 	
->>>>>>> 4aec74bad3a6ae2f46dd6fb0e0f6ae443957dc53
 }
