@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="C:\Users\laavanye bahl\Desktop\GitHub\Guess_The_Voice" />
-            <option value="C:\Users\laavanye bahl\Desktop\GitHub\Guess_The_Voice\teamlrp" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/teamlrp" />
           </set>
         </option>
       </GradleProjectSettings>
