@@ -20,6 +20,10 @@
             android:name="in.co.teamlrp.guessthevoice.MainActivity2"
             android:label="@string/title_activity_main_activity2" >
         </activity>
+        <activity
+            android:name="in.co.teamlrp.guessthevoice.SplashScreen"
+            android:label="@string/title_activity_splash_screen" >
+        </activity>
     </application>
 
 </manifest>
