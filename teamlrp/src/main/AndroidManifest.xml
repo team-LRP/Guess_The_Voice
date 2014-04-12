@@ -10,7 +10,7 @@
         <activity
             android:name="in.co.teamlrp.guessthevoice.MainActivity"
             android:label="@string/app_name" >
-<<<<<<< HEAD
+
             </activity>
 
         <activity
@@ -19,15 +19,9 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
 
         <intent-filter>
-=======
-        </activity>
-        <activity
-            android:name="in.co.teamlrp.guessthevoice.SplashScreen"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-            <intent-filter>
 
->>>>>>> FETCH_HEAD
+
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

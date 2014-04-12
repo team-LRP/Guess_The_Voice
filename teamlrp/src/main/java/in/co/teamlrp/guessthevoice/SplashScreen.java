@@ -1,8 +1,9 @@
 package in.co.teamlrp.guessthevoice;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
-import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
@@ -39,6 +40,7 @@ public class SplashScreen extends Activity {
             }
         }, SPLASH_DISPLAY_LENGHT);
     }
+    @TargetApi(Build.VERSION_CODES.ECLAIR)
     @Override
     public void onBackPressed() {
 
