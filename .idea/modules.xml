@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Guess_The_Voice.iml" filepath="$PROJECT_DIR$/Guess_The_Voice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/teamlrp/teamlrp.iml" filepath="$PROJECT_DIR$/teamlrp/teamlrp.iml" />
     </modules>
   </component>
 </project>
