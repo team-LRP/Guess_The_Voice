@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -14,7 +12,7 @@ import android.view.WindowManager;
 public class SplashScreen extends Activity {
 
 
-    private final int SPLASH_DISPLAY_LENGHT = 9000;
+    private final int SPLASH_DISPLAY_LENGHT = 6000;
 
     /** Called when the activity is first created. */
     @Override
@@ -43,6 +41,10 @@ public class SplashScreen extends Activity {
             }
         }, SPLASH_DISPLAY_LENGHT);
     }
+    @Override
+    public void onBackPressed() {
 
+        super.onBackPressed();
+    }
 
 }
