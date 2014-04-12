@@ -10,66 +10,9 @@
 
 
 
-<<<<<<< HEAD
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="152dp"
-        android:minHeight="130dp"
-        android:paddingEnd="70dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textColor="#22ff20"
-        android:background="#010002"
-        android:textSize="30dp"
-        android:typeface="sans" />
 
-    <Button
-        android:textColor="#22ff20"
-        android:background="#010002"
-        android:textSize="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_alignTop="@+id/button1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:minHeight="130dp"
-        android:gravity="center_vertical"
-        android:paddingStart="70dp" />
 
-    <Button
-        android:textColor="#22ff20"
-        android:background="#010002"
-        android:textSize="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_marginTop="38dp"
-        android:minHeight="130dp"
-        android:layout_below="@+id/button1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center_vertical"
-        android:paddingEnd="70dp" />
 
-    <Button
-        android:textColor="#22ff20"
-        android:background="#010002"
-        android:textSize="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4"
-        android:layout_alignTop="@+id/button3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:gravity="center_vertical"
-        android:minHeight="130dp"
-        android:paddingStart="70dp" />
-=======
 <Button
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
@@ -111,7 +54,7 @@ android:layout_marginRight="86dp"
 android:layout_marginBottom="129dp" />
 
 
->>>>>>> 0dd127887cf76bc8b9a84c8f47da8c20801bf6fc
+
 
     <TextView
 
