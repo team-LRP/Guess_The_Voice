@@ -14,6 +14,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Random;
 
 //Hi Mean
 
@@ -55,17 +56,44 @@ public class MainActivity2 extends Activity {
 
         context = this;
 
+        int i,j,k,l;
+        String array[] = {"femaleEnglish","maleEnglish","femaleHindi","maleHindi"};
+
+        Random random = new Random();
+        String randomArray= array[random.nextInt(4)];
 
 
 
         try
         {
+
             JSONObject object = new JSONObject(loadJSONFromAsset());
-            JSONArray maleEnglish = object.getJSONArray("maleEnglish");
-            option1 = maleEnglish.getJSONObject(0).getString("name");
-            option2 = maleEnglish.getJSONObject(1).getString("name");
-            option3 = maleEnglish.getJSONObject(2).getString("name");
-            option4 = maleEnglish.getJSONObject(3).getString("name");
+            JSONArray jsonArray = object.getJSONArray("maleEnglish");
+            i=random.nextInt(8);
+            option1 = jsonArray.getJSONObject(i).getString("name");
+            j=i;
+            i=random.nextInt(8);
+            while(i==j)
+            {
+                i=random.nextInt(8);
+            }
+            option2 = jsonArray.getJSONObject(i).getString("name");
+            k=i;
+            while (i == j || i==k) {
+                    i = random.nextInt(8);
+                }
+
+
+            option3 = jsonArray.getJSONObject(i).getString("name");
+            l=i;
+            while(i==j||i==k||i==l)
+            {
+                i=random.nextInt(8);
+            }
+            option4 = jsonArray.getJSONObject(i).getString("name");
+
+
+
 
         } catch (JSONException e) {
             e.printStackTrace();

@@ -17,7 +17,7 @@ android:textSize="20dp"
 android:layout_alignTop="@+id/button1"
 android:layout_alignLeft="@+id/button4"
 android:layout_alignStart="@+id/button4"
-        android:background="#030004"
+        
         />
 
 <Button
@@ -30,7 +30,7 @@ android:id="@+id/button1"
 android:layout_centerVertical="true"
 android:layout_alignLeft="@+id/button3"
 android:layout_alignStart="@+id/button3"
-    android:background="#030004" />
+     />
 
 <Button
 android:layout_width="wrap_content"
