@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -22,33 +23,45 @@ import java.io.InputStream;
 public class MainActivity extends Activity {
 
 
-
+   Button button ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button singleplayer = (Button) findViewById(R.id.singleplayerbutton);
-        singleplayer.setOnClickListener(new View.OnClickListener() {
+
+
+        MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.letsgetstarted);
+        mPlayer.start();
+
+        button = (Button) findViewById(R.id.singleplayerbutton);
+
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MediaPlayer m;
-                int DELAY = 6000;
-                m = MediaPlayer.create(getApplicationContext(), R.raw.letsgetstarted);
-                m.start();
 
-                Handler h = new Handler();
-                h.postDelayed(new Runnable() {
+
+
+                //delay in ms
+                int DELAY = 1700;
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent i = new Intent(getApplicationContext(), MainActivity2.class);
-                        startActivity(i);
+                        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                        startActivity(intent);
                     }
                 }, DELAY);
 
 
+
+
             }
+
+
         });
+        
     }
 
 
