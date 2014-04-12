@@ -19,12 +19,17 @@
         android:layout_marginTop="152dp"
         android:minHeight="130dp"
         android:paddingEnd="70dp"
-
-        android:gravity="center_vertical"
-        android:text="xc"
-         />
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#22ff20"
+        android:background="#010002"
+        android:textSize="30dp"
+        android:typeface="sans" />
 
     <Button
+        android:textColor="#22ff20"
+        android:background="#010002"
+        android:textSize="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
@@ -36,6 +41,9 @@
         android:paddingStart="70dp" />
 
     <Button
+        android:textColor="#22ff20"
+        android:background="#010002"
+        android:textSize="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
@@ -48,6 +56,9 @@
         android:paddingEnd="70dp" />
 
     <Button
+        android:textColor="#22ff20"
+        android:background="#010002"
+        android:textSize="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button4"
@@ -59,8 +70,10 @@
         android:paddingStart="70dp" />
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Guess the voice ?"
         android:id="@+id/display"
