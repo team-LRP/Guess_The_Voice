@@ -1,0 +1,18 @@
+{
+	"femaleEnglish" : [
+		{"name" : "Penny",},
+		{"name" : "Angelina"},
+		{"name" : "Scarlett"},
+		{"name" : "Natalie"}
+	],
+	"maleEnglish" : [
+		{"name" : "Johnny Depp"}
+	],
+	"femaleHindi" : [
+		{"name" : ""}
+	],
+	"maleHindi" : [
+		{"name" : ""}
+	]
+	
+}
