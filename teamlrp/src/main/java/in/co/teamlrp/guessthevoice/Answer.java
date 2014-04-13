@@ -23,19 +23,28 @@ public class Answer extends Activity {
         setContentView(R.layout.activity_answer);
         TextView answer = (TextView)findViewById(R.id.answer);
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         a1 = intent.getIntExtra("Cas_value", b1);
 
-        if(a1==0)
+        if(a1==0) {
             answer.setText("Lol, your answer is Wrong!");
-        else
-            answer.setText("OMG, it's Right!");
+            //score=score-10;
+
+        }
+        else {
+            //score=score+10;
+            answer.setText("OMG, it's Right!"+" And your score = 10");
+
+
+        }
         Button cont = (Button)findViewById(R.id.cont);
         cont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+
                 Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+            //    intent.putExtra("Score", score);
                 startActivity(i);
             }
         });

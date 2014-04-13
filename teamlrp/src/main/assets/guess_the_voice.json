@@ -16,36 +16,27 @@
 	],
 	"maleEnglish" : [
 
-			            {"name" : "Johnny Depp", "id" : "jimparson"},
-            			{"name" : "Bryan Cranston","id" : "bryan"},
-            			{"name" : "Aaron Paul", "id":"bryan"},
-            			{"name" : "Robert Downey Jr", "id" : "neilharris"},
-            			{"name" : "Jim Parsons","id" : "jimparson"},
-            			{"name" : "Neil P Harris","id" : "neilharris"},
-            			{"name" : "Benedict Cumberbatch", "id" : "heathledger"},
-            			{"name" : "Heath Ledger","id" : "heathledger"}
+			            {"name" : "Johnny Depp"},
+            			{"name" : "Bryan Cranston"},
+            			{"name" : "Aaron Paul" },
+            			{"name" : "Robert Downey Jr"},
+            			{"name" : "Jim Parsons"},
+            			{"name" : "Neil P Harris"},
+            			{"name" : "Sherlock"},
+            			{"name" : "Heath Ledger"}
 
 	],
-	"femaleHindi" : [
-		{"name" : "Deepika Padukone"},
-		{"name" : "Katrina Kaif"},
-		{"name" : "Anoushka Sharma"},
-		{"name" : "Madhuri Dixit"},
-		{"name" : "Sonam Kapoor"},
-		{"name" : "Kareena Kapoor"},
-		{"name" : "Rani Mukherjee"},
-		{"name" : "Kajol"}
-	],
-	"maleHindi" : [
+	"hindi" : [
+		{"name" : "Aamir Khan"},
 		{"name" : "Amitabh Bachan"},
 		{"name" : "Boman Irani"},
-		{"name" : "Aamir Khan"},
-		{"name" : "Akshay Kumar"},
-		{"name" : "Salman Khan"},
+		{"name" : "Deepika Padukone"},
+		{"name" : "Kajol"},
 		{"name" : "Kapil Sharma"},
-		{"name" : "Sharman Joshi"},
-		{"name" : "Paresh Rawal"}
-
+		{"name" : "Kareena Kapoor"},	
+		{"name" : "Paresh Rawal"},
+		{"name" : "Salman Khan"}
+	
 	]
 	
 }
