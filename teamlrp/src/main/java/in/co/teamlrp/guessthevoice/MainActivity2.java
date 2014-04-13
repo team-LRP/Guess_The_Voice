@@ -45,6 +45,7 @@ public class MainActivity2 extends Activity {
     String id="";
     MediaPlayer m;
     String file;
+    int arraghav[] = new int[]{R.raw.jimparson, R.raw.bryan, R.raw.bryan, R.raw.robertdowny, R.raw.jimparson, R.raw.neilharris, R.raw.heathledger, R.raw.heathledger};
 
 
     @Override
@@ -67,42 +68,36 @@ public class MainActivity2 extends Activity {
         context = this;
 
 
-
-
         Random random = new Random();
-         randomArray= array[random.nextInt(4)];
+        randomArray = array[random.nextInt(4)];
 
-        ArrayList<Integer> arr =new ArrayList<Integer>();
+        ArrayList<Integer> arr = new ArrayList<Integer>();
 
 
-
-        try
-        {
+        try {
 
             JSONObject object = new JSONObject(loadJSONFromAsset());
             JSONArray jsonArray = object.getJSONArray("maleEnglish");
 
 
-            i=random.nextInt(8);
+            i = random.nextInt(8);
             option1 = jsonArray.getJSONObject(i).getString("name");
-            j=i;
-            i=random.nextInt(8);
-            while(i==j)
-            {
-                i=random.nextInt(8);
+            j = i;
+            i = random.nextInt(8);
+            while (i == j) {
+                i = random.nextInt(8);
             }
             option2 = jsonArray.getJSONObject(i).getString("name");
-            k=i;
-            while (i == j || i==k) {
-                    i = random.nextInt(8);
-                }
+            k = i;
+            while (i == j || i == k) {
+                i = random.nextInt(8);
+            }
 
 
             option3 = jsonArray.getJSONObject(i).getString("name");
-            l=i;
-            while(i==j||i==k||i==l)
-            {
-                i=random.nextInt(8);
+            l = i;
+            while (i == j || i == k || i == l) {
+                i = random.nextInt(8);
             }
             option4 = jsonArray.getJSONObject(i).getString("name");
 
@@ -112,36 +107,32 @@ public class MainActivity2 extends Activity {
             arr.add(l);
 
             right_ans = arr.get(random.nextInt(4));
-          //  id = jsonArray.getJSONObject(right_ans).getString("id");
-          //  file="R.raw."+id;
+              //id = jsonArray.getJSONObject(right_ans).getString("id");
+              //file="R.raw."+id;
 
-         //   m = MediaPlayer.create(this, Integer.parseInt(file));
-          //  m.start();
+               m = MediaPlayer.create(this, arraghav[right_ans]);
+              m.start();
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
 
-
-
-
-
         butt1.setText(option1);
         butt2.setText(option2);
         butt3.setText(option3);
         butt4.setText(option4);
+        butt1.setOnClickListener(new btn1OnClick());
+        butt2.setOnClickListener(new btn2OnClick());
+        butt3.setOnClickListener(new btn3OnClick());
+        butt4.setOnClickListener(new btn4OnClick());
+
 
     }
 
-    @Override
-    public void onBackPressed() {
- //       m.stop();
-    }
+        public class btn1OnClick implements Button.OnClickListener{
 
-    public class btn1OnClick implements Button.OnClickListener{
-
-        Intent intent;
+            Intent intent;
         @Override
         public void onClick(View view) {
             if (right_ans == j) {
@@ -149,7 +140,7 @@ public class MainActivity2 extends Activity {
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
-           // m.stop();
+            m.stop();
             startActivity(intent);
 
 
@@ -165,7 +156,7 @@ public class MainActivity2 extends Activity {
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
-        //    m.stop();
+              m.stop();
             startActivity(intent);
 
 
@@ -181,7 +172,7 @@ public class MainActivity2 extends Activity {
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
-        //    m.stop();
+           m.stop();
             startActivity(intent);
 
 
@@ -199,7 +190,7 @@ public class MainActivity2 extends Activity {
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
-        //    m.stop();
+           m.stop();
 
             startActivity(intent);
 
