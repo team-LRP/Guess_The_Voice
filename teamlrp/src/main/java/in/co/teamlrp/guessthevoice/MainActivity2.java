@@ -42,6 +42,8 @@ public class MainActivity2 extends Activity {
 
     int cas=0;
 
+    String id="";
+
 
 
     @Override
@@ -103,18 +105,25 @@ public class MainActivity2 extends Activity {
             }
             option4 = jsonArray.getJSONObject(i).getString("name");
 
+            arr.add(i);
+            arr.add(j);
+            arr.add(k);
+            arr.add(l);
+
+            right_ans = arr.get(random.nextInt(4));
+
+            id = jsonArray.getJSONObject(right_ans).getString("id");
+
+
 
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        arr.add(i);
-        arr.add(j);
-        arr.add(k);
-        arr.add(l);
 
-        right_ans = arr.get(random.nextInt(4));
+
+
 
 
         butt1.setText(option1);
