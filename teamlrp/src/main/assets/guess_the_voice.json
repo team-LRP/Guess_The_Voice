@@ -16,14 +16,14 @@
 	],
 	"maleEnglish" : [
 
-			            {"name" : "Johnny Depp"},
-            			{"name" : "Bryan Cranston","id" : "bryan.mp3"},
-            			{"name" : "Aaron Paul"},
-            			{"name" : "Robert Downey Jr"},
-            			{"name" : "Jim Parsons","id" : "jimparson.mp3"},
-            			{"name" : "Neil P Harris","id" : "neilharris.mp3"},
-            			{"name" : "Benedict Cumberbatch"},
-            			{"name" : "Heath Ledger","id" : "heathledger.mp3"}
+			            {"name" : "Johnny Depp", "id" : "jimparson"},
+            			{"name" : "Bryan Cranston","id" : "bryan"},
+            			{"name" : "Aaron Paul", "id":"bryan"},
+            			{"name" : "Robert Downey Jr", "id" : "neilharris"},
+            			{"name" : "Jim Parsons","id" : "jimparson"},
+            			{"name" : "Neil P Harris","id" : "neilharris"},
+            			{"name" : "Benedict Cumberbatch", "id" : "heathledger"},
+            			{"name" : "Heath Ledger","id" : "heathledger"}
 
 	],
 	"femaleHindi" : [
