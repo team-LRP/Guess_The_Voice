@@ -25,10 +25,13 @@ public class Answer extends Activity {
 
         final Intent intent = getIntent();
         a1 = intent.getIntExtra("Cas_value", b1);
+        final Intent gameover;
 
         if(a1==0) {
-            answer.setText("Lol, your answer is Wrong!");
-            
+            answer.setText("Lol, your answer is Wrong!, Game Over");
+
+            gameover = new Intent(this, FinalResult.class);
+            startActivity(gameover);
 
         }
         else {
@@ -46,6 +49,7 @@ public class Answer extends Activity {
                 Intent i = new Intent(getApplicationContext(), MainActivity2.class);
             //    intent.putExtra("Score", score);
                 startActivity(i);
+
             }
         });
 
