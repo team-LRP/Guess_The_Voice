@@ -15,6 +15,7 @@ public class MainActivity extends Activity {
 
 
    Button button ;
+    Button leaderboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,28 @@ public class MainActivity extends Activity {
         //mPlayer.start();
 
         button = (Button) findViewById(R.id.singleplayerbutton);
+        leaderboard = (Button) findViewById(R.id.leaderboardbutton);
+
+        leaderboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                //delay in ms
+                //int DELAY = 1700;
+
+                //Handler handler = new Handler();
+                //handler.postDelayed(new Runnable() {
+                // @Override
+                //  public void run() {
+                Intent intent = new Intent(MainActivity.this, Leaderboard.class);
+                startActivity(intent);
+                //    }
+                //  }, DELAY);
+            }
+
+
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

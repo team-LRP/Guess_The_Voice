@@ -26,14 +26,7 @@ import java.util.Random;
 
 public class MainActivity2 extends Activity {
 
-<<<<<<< HEAD
 
-
-
-
-
-=======
->>>>>>> 7b86f8089768aaf17756abfb83f47cf047809fd3
     Button butt1 ;
     Button butt2 ;
     Button butt3 ;
