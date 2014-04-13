@@ -1,7 +1,6 @@
 package in.co.teamlrp.guessthevoice;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -11,44 +10,52 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
-
 
 public class MainActivity extends Activity {
 
+    /* Good morning gentlemen, we have gathered here for a cause, and our aim is to complete our task with utmost concentration and intensity, because
+    those who are crazy enough to think they can change the world are actually the ones who change the world"
+     */
 
-
+   Button button ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button singleplayer = (Button) findViewById(R.id.singleplayerbutton);
-        singleplayer.setOnClickListener(new View.OnClickListener() {
+
+
+        MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.letsgetstarted);
+        mPlayer.start();
+
+        button = (Button) findViewById(R.id.singleplayerbutton);
+
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MediaPlayer m;
-                int DELAY = 6000;
-                m = MediaPlayer.create(getApplicationContext(), R.raw.letsgetstarted);
-                m.start();
 
-                Handler h = new Handler();
-                h.postDelayed(new Runnable() {
+
+
+                //delay in ms
+                int DELAY = 1700;
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent i = new Intent(getApplicationContext(), MainActivity2.class);
-                        startActivity(i);
+                        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                        startActivity(intent);
                     }
                 }, DELAY);
 
 
+
+
             }
+
+
         });
+        
     }
 
 
