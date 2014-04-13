@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 import org.json.JSONArray;
@@ -33,7 +34,6 @@ public class MainActivity2 extends Activity {
     String option3 ;
     String option4 ;
 
-<<<<<<< HEAD
     String randomArray;
     String array[] = {"femaleEnglish","maleEnglish","femaleHindi","maleHindi"};
 
@@ -41,9 +41,6 @@ public class MainActivity2 extends Activity {
     int i=0,j=0,k=0,l=0;
 
     int cas=0;
-
-=======
->>>>>>> dcb353d2ea928d0e81cdc2da5b3f99a16814ffb6
 
 
 
@@ -61,21 +58,9 @@ public class MainActivity2 extends Activity {
 
 
         butt3 = (Button) findViewById(R.id.button3);
-<<<<<<< HEAD
-=======
-        
->>>>>>> dcb353d2ea928d0e81cdc2da5b3f99a16814ffb6
-
 
         butt4 = (Button) findViewById(R.id.button4);
 
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> dcb353d2ea928d0e81cdc2da5b3f99a16814ffb6
 
         context = this;
 
@@ -92,11 +77,9 @@ public class MainActivity2 extends Activity {
         {
 
             JSONObject object = new JSONObject(loadJSONFromAsset());
-<<<<<<< HEAD
             JSONArray jsonArray = object.getJSONArray("maleHindi");
-=======
-            JSONArray jsonArray = object.getJSONArray("randomArray");
->>>>>>> dcb353d2ea928d0e81cdc2da5b3f99a16814ffb6
+
+
             i=random.nextInt(8);
             option1 = jsonArray.getJSONObject(i).getString("name");
             j=i;
@@ -141,7 +124,6 @@ public class MainActivity2 extends Activity {
 
     }
 
-<<<<<<< HEAD
 
 
 
@@ -153,7 +135,7 @@ public class MainActivity2 extends Activity {
             if (right_ans == j) {
                 cas = 1;
             }
-            intent = new Intent(this, answer.class);
+            intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
             startActivity(intent);
 
@@ -167,7 +149,7 @@ public class MainActivity2 extends Activity {
             if (right_ans == k) {
                 cas = 1;
             }
-            intent = new Intent(this, answer.class);
+            intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
             startActivity(intent);
 
@@ -181,7 +163,7 @@ public class MainActivity2 extends Activity {
             if (right_ans == l) {
                 cas = 1;
             }
-            intent = new Intent(this, answer.class);
+            intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
             startActivity(intent);
 
@@ -191,11 +173,13 @@ public class MainActivity2 extends Activity {
 
         Intent intent;
         @Override
+
+
         public void onClick(View view) {
             if (right_ans == i) {
                 cas = 1;
             }
-            intent = new Intent(this, answer.class);
+            intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
             startActivity(intent);
 
@@ -203,8 +187,7 @@ public class MainActivity2 extends Activity {
     }
 
 
-=======
->>>>>>> dcb353d2ea928d0e81cdc2da5b3f99a16814ffb6
+
 
 
 
