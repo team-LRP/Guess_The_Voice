@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Continue"
-        android:id="@+id/continue"
+        android:id="@+id/cont"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -23,7 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/answer"
-        android:layout_above="@+id/continue"
+        android:layout_above="@+id/cont"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="115dp" />
 </RelativeLayout>
