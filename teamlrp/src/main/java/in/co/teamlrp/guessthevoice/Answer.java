@@ -5,18 +5,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class Answer extends Activity {
-    
 
 
+
+    int a1, b1=0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer);
+
+        Intent intent = getIntent();
+        a1 = intent.getIntExtra("Cas_value", b1);
+
+        Button cont = (Button)findViewById(R.id.cont);
+        cont.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+                startActivity(i);
+            }
+        });
+
     }
 
 
