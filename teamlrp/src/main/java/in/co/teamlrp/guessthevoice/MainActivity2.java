@@ -2,8 +2,8 @@ package in.co.teamlrp.guessthevoice;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,7 +43,8 @@ public class MainActivity2 extends Activity {
     int cas=0;
 
     String id="";
-
+    MediaPlayer m;
+    String file;
 
 
     @Override
@@ -65,6 +66,7 @@ public class MainActivity2 extends Activity {
 
 
         context = this;
+
 
 
 
@@ -111,11 +113,11 @@ public class MainActivity2 extends Activity {
             arr.add(l);
 
             right_ans = arr.get(random.nextInt(4));
-
             id = jsonArray.getJSONObject(right_ans).getString("id");
+            file="R.raw."+id;
 
-
-
+            m = MediaPlayer.create(this, Integer.parseInt(file));
+            m.start();
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -133,8 +135,10 @@ public class MainActivity2 extends Activity {
 
     }
 
-
-
+    @Override
+    public void onBackPressed() {
+        m.stop();
+    }
 
     public class btn1OnClick implements Button.OnClickListener{
 
@@ -146,7 +150,9 @@ public class MainActivity2 extends Activity {
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
+            m.stop();
             startActivity(intent);
+
 
         }
     }
@@ -160,7 +166,9 @@ public class MainActivity2 extends Activity {
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
+            m.stop();
             startActivity(intent);
+
 
         }
     }
@@ -174,7 +182,9 @@ public class MainActivity2 extends Activity {
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
+            m.stop();
             startActivity(intent);
+
 
         }
     }
@@ -190,6 +200,8 @@ public class MainActivity2 extends Activity {
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
+            m.stop();
+
             startActivity(intent);
 
         }

@@ -17,13 +17,13 @@
 	"maleEnglish" : [
 
 			            {"name" : "Johnny Depp"},
-            			{"name" : "Bryan Cranston","id" : "bryan.mp3"},
+            			{"name" : "Bryan Cranston","id" : "bryan"},
             			{"name" : "Aaron Paul"},
             			{"name" : "Robert Downey Jr"},
-            			{"name" : "Jim Parsons","id" : "jimparson.mp3"},
-            			{"name" : "Neil P Harris","id" : "neilharris.mp3"},
+            			{"name" : "Jim Parsons","id" : "jimparson"},
+            			{"name" : "Neil P Harris","id" : "neilharris"},
             			{"name" : "Benedict Cumberbatch"},
-            			{"name" : "Heath Ledger","id" : "heathledger.mp3"}
+            			{"name" : "Heath Ledger","id" : "heathledger"}
 
 	],
 	"femaleHindi" : [
