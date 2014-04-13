@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class Answer extends Activity {
@@ -20,10 +21,15 @@ public class Answer extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer);
+        TextView answer = (TextView)findViewById(R.id.answer);
 
         Intent intent = getIntent();
         a1 = intent.getIntExtra("Cas_value", b1);
 
+        if(a1==0)
+            answer.setText("Lol, your answer is Wrong!");
+        else
+            answer.setText("OMG, it's Right!");
         Button cont = (Button)findViewById(R.id.cont);
         cont.setOnClickListener(new View.OnClickListener() {
             @Override
