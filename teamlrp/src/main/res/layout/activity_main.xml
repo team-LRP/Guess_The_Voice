@@ -17,25 +17,13 @@ android:id="@+id/singleplayerbutton"
 android:layout_centerVertical="true"
 android:layout_centerHorizontal="true" />
 
-<Button
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Multiplayer"
-android:id="@+id/multiplayerbutton"
-android:layout_below="@+id/singleplayerbutton"
-android:layout_alignLeft="@+id/singleplayerbutton"
-android:layout_alignStart="@+id/singleplayerbutton"
-android:layout_alignRight="@id/singleplayerbutton"/>
 
 <Button
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:text="Leaderboard"
 android:id="@+id/leaderboardbutton"
-android:layout_below="@+id/multiplayerbutton"
-android:layout_alignLeft="@+id/multiplayerbutton"
-android:layout_alignStart="@+id/multiplayerbutton"
-android:layout_alignRight="@+id/multiplayerbutton"/>
+/>
 
     <MediaController
         android:layout_width="wrap_content"
@@ -44,4 +32,15 @@ android:layout_alignRight="@+id/multiplayerbutton"/>
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name?"
+        android:ems="10"
+        android:id="@+id/username"
+        android:layout_above="@+id/singleplayerbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="96dp" />
 </RelativeLayout>

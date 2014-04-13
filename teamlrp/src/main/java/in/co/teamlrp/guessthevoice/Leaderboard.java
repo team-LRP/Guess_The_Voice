@@ -4,64 +4,64 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.shephertz.app42.paas.sdk.android.App42API;
 import com.shephertz.app42.paas.sdk.android.App42CallBack;
 import com.shephertz.app42.paas.sdk.android.game.Game;
 import com.shephertz.app42.paas.sdk.android.game.ScoreBoardService;
 
-import java.math.BigDecimal;
+import java.util.ArrayList;
 
 
-public class FinalResult extends Activity {
-
-    String gamename = "Guess the voice";
-<<<<<<< HEAD
-    BigDecimal score = new BigDecimal(Scoring.Score);
+public class Leaderboard extends Activity {
 
 
-=======
-    String username = Scoring.username;
->>>>>>> 4a2786b08a60d72670658880b17041b1d9a1da01
+    String gamename= "Guess the voice";
+    int max=5;
+    ArrayList<String> arrayList = new ArrayList<String>();
+    ListView listview = (ListView) findViewById(R.id.listView);
 
-    TextView txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_final_result);
+        setContentView(R.layout.activity_leaderboard);
         App42API.initialize(this, "46301e5ea46a6e878160f7548b56b2ef06c4868cd18f2508a33aeabaa619de82", "cbe1369b0fdca4079e6b3458e40a21775ac2ca9a8b72e4460dc53424c2c4c1a9");
 
         ScoreBoardService scoreBoardService= App42API.buildScoreBoardService();
-        txt = (TextView)findViewById(R.id.textView);
-        txt.setText(Scoring.Score);
 
-
-<<<<<<< HEAD
-        scoreBoardService.saveUserScore(gamename,username,score,new App42CallBack() {
-=======
-        scoreBoardService.saveUserScore(gamename,username, BigDecimal.valueOf(Scoring.Score),new App42CallBack() {
->>>>>>> 4a2786b08a60d72670658880b17041b1d9a1da01
+        scoreBoardService.getTopNRankers(gamename,max, new App42CallBack() {
             public void onSuccess(Object response)
             {
+                Game game = (Game)response;
+                for(int i = 0;i<game.getScoreList().size();i++)
+                {
+                    arrayList.add(game.getScoreList().get(i).getUserName()+" "+game.getScoreList().get(i).getValue());
 
+                }
             }
             public void onException(Exception ex)
             {
                 System.out.println("Exception Message"+ex.getMessage());
             }
         });
+        ArrayAdapter adapter = new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1, arrayList);
+        listview.setAdapter(adapter);
+
+
+
 
     }
-
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.final_result, menu);
+        getMenuInflater().inflate(R.menu.leaderboard, menu);
         return true;
     }
 
@@ -76,7 +76,5 @@ public class FinalResult extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 
 }
