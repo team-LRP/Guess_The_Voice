@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.shephertz.app42.paas.sdk.android.App42API;
 import com.shephertz.app42.paas.sdk.android.App42CallBack;
@@ -16,10 +17,15 @@ import java.math.BigDecimal;
 public class FinalResult extends Activity {
 
     String gamename = "Guess the voice";
+<<<<<<< HEAD
     BigDecimal score = new BigDecimal(Scoring.Score);
 
 
+=======
+    String username = Scoring.username;
+>>>>>>> 4a2786b08a60d72670658880b17041b1d9a1da01
 
+    TextView txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +34,15 @@ public class FinalResult extends Activity {
         App42API.initialize(this, "46301e5ea46a6e878160f7548b56b2ef06c4868cd18f2508a33aeabaa619de82", "cbe1369b0fdca4079e6b3458e40a21775ac2ca9a8b72e4460dc53424c2c4c1a9");
 
         ScoreBoardService scoreBoardService= App42API.buildScoreBoardService();
+        txt = (TextView)findViewById(R.id.textView);
+        txt.setText(Scoring.Score);
 
 
+<<<<<<< HEAD
         scoreBoardService.saveUserScore(gamename,username,score,new App42CallBack() {
+=======
+        scoreBoardService.saveUserScore(gamename,username, BigDecimal.valueOf(Scoring.Score),new App42CallBack() {
+>>>>>>> 4a2786b08a60d72670658880b17041b1d9a1da01
             public void onSuccess(Object response)
             {
 
