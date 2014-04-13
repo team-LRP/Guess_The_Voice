@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 import org.json.JSONArray;
@@ -31,7 +30,7 @@ public class MainActivity2 extends Activity {
     String option3 ;
     String option4 ;
 
-    private ButtonClickListener btnClick;
+
 
 
     @Override
@@ -41,18 +40,20 @@ public class MainActivity2 extends Activity {
 
 
         butt1 = (Button) findViewById(R.id.button1);
-        butt1.setOnClickListener(btnClick);
+
+
 
         butt2 = (Button) findViewById(R.id.button2);
-        butt2.setOnClickListener(btnClick);
+
 
         butt3 = (Button) findViewById(R.id.button3);
-        butt3.setOnClickListener(btnClick);
+        
+
 
         butt4 = (Button) findViewById(R.id.button4);
-        butt4.setOnClickListener(btnClick);
 
-        btnClick= new ButtonClickListener();
+
+
 
         context = this;
 
@@ -68,7 +69,7 @@ public class MainActivity2 extends Activity {
         {
 
             JSONObject object = new JSONObject(loadJSONFromAsset());
-            JSONArray jsonArray = object.getJSONArray("maleEnglish");
+            JSONArray jsonArray = object.getJSONArray("randomArray");
             i=random.nextInt(8);
             option1 = jsonArray.getJSONObject(i).getString("name");
             j=i;
@@ -106,16 +107,6 @@ public class MainActivity2 extends Activity {
         butt3.setText(option3);
         butt4.setText(option4);
 
-    }
-
-    private class ButtonClickListener implements View.OnClickListener {
-
-
-        public void onClick(View v) {
-
-
-
-        }
     }
 
 
