@@ -1,10 +1,8 @@
 package in.co.teamlrp.guessthevoice;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -12,16 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
-
 
 public class MainActivity extends Activity {
 
+    /* Good morning gentlemen, we have gathered here for a cause, and our aim is to complete our task with utmost concentration and intensity, because
+    those who are crazy enough to think they can change the world are actually the ones who change the world"
+     */
 
    Button button ;
 
