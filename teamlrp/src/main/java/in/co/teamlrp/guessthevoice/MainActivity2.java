@@ -2,6 +2,8 @@ package in.co.teamlrp.guessthevoice;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +16,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Random;
 
 //Hi Mean
@@ -31,7 +34,15 @@ public class MainActivity2 extends Activity {
     String option3 ;
     String option4 ;
 
-    private ButtonClickListener btnClick;
+    String randomArray;
+    String array[] = {"femaleEnglish","maleEnglish","femaleHindi","maleHindi"};
+
+    int right_ans;
+    int i=0,j=0,k=0,l=0;
+
+    int cas=0;
+
+
 
 
     @Override
@@ -41,26 +52,30 @@ public class MainActivity2 extends Activity {
 
 
         butt1 = (Button) findViewById(R.id.button1);
-        butt1.setOnClickListener(btnClick);
+
+
 
         butt2 = (Button) findViewById(R.id.button2);
-        butt2.setOnClickListener(btnClick);
+
 
         butt3 = (Button) findViewById(R.id.button3);
-        butt3.setOnClickListener(btnClick);
+
 
         butt4 = (Button) findViewById(R.id.button4);
-        butt4.setOnClickListener(btnClick);
 
-        btnClick= new ButtonClickListener();
+
+
+
+
 
         context = this;
 
-        int i,j,k,l;
-        String array[] = {"femaleEnglish","maleEnglish","femaleHindi","maleHindi"};
+
 
         Random random = new Random();
-        String randomArray= array[random.nextInt(4)];
+         randomArray= array[random.nextInt(4)];
+
+        ArrayList<Integer> arr =new ArrayList<Integer>();
 
 
 
@@ -68,7 +83,7 @@ public class MainActivity2 extends Activity {
         {
 
             JSONObject object = new JSONObject(loadJSONFromAsset());
-            JSONArray jsonArray = object.getJSONArray("maleEnglish");
+            JSONArray jsonArray = object.getJSONArray("maleHindi");
             i=random.nextInt(8);
             option1 = jsonArray.getJSONObject(i).getString("name");
             j=i;
@@ -94,11 +109,16 @@ public class MainActivity2 extends Activity {
 
 
 
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
+        arr.add(i);
+        arr.add(j);
+        arr.add(k);
+        arr.add(l);
+
+        right_ans = arr.get(random.nextInt(4));
 
 
         butt1.setText(option1);
@@ -108,15 +128,66 @@ public class MainActivity2 extends Activity {
 
     }
 
-    private class ButtonClickListener implements View.OnClickListener {
 
 
-        public void onClick(View v) {
 
+    public class btn1OnClick implements Button.OnClickListener{
 
+        Intent intent;
+        @Override
+        public void onClick(View view) {
+            if (right_ans == j) {
+                cas = 1;
+            }
+            intent = new Intent(this, answer.class);
+            intent.putExtra("Cas_value", cas);
+            startActivity(intent);
 
         }
     }
+    public class btn2OnClick implements Button.OnClickListener{
+
+        Intent intent;
+        @Override
+        public void onClick(View view) {
+            if (right_ans == k) {
+                cas = 1;
+            }
+            intent = new Intent(this, answer.class);
+            intent.putExtra("Cas_value", cas);
+            startActivity(intent);
+
+        }
+    }
+    public class btn3OnClick implements Button.OnClickListener{
+
+        Intent intent;
+        @Override
+        public void onClick(View view) {
+            if (right_ans == l) {
+                cas = 1;
+            }
+            intent = new Intent(this, answer.class);
+            intent.putExtra("Cas_value", cas);
+            startActivity(intent);
+
+        }
+    }
+    public class btn4OnClick implements Button.OnClickListener{
+
+        Intent intent;
+        @Override
+        public void onClick(View view) {
+            if (right_ans == i) {
+                cas = 1;
+            }
+            intent = new Intent(this, answer.class);
+            intent.putExtra("Cas_value", cas);
+            startActivity(intent);
+
+        }
+    }
+
 
 
 
