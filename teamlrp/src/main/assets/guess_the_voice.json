@@ -27,7 +27,14 @@
 
 	],
 	"femaleHindi" : [
-		{"name" : ""}
+		{"name" : "Deepika Padukone"},
+		{"name" : "Katrina Kaif"},
+		{"name" : "Anoushka Sharma"},
+		{"name" : "Madhuri Dixit"},
+		{"name" : "Sonam Kapoor"},
+		{"name" : "Kareena Kapoor"},
+		{"name" : "Rani Mukherjee"},
+		{"name" : "Kajol"}
 	],
 	"maleHindi" : [
 		{"name" : "Amitabh Bachan"},
