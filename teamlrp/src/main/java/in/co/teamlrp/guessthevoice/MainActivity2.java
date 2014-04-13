@@ -56,7 +56,6 @@ public class MainActivity2 extends Activity {
         butt1 = (Button) findViewById(R.id.button1);
 
 
-
         butt2 = (Button) findViewById(R.id.button2);
 
 
