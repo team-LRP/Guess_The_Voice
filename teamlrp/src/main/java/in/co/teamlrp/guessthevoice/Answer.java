@@ -28,12 +28,12 @@ public class Answer extends Activity {
 
         if(a1==0) {
             answer.setText("Lol, your answer is Wrong!");
-            //score=score-10;
+            
 
         }
         else {
             //score=score+10;
-            answer.setText("OMG, it's Right!"+" And your score = 10");
+            answer.setText("OMG, it's Right!"+" You get +10");
 
 
         }
