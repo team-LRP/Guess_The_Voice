@@ -9,4 +9,5 @@ public class Scoring extends Application {
 
 
     public static int Score;
+    public static String username;
 }
