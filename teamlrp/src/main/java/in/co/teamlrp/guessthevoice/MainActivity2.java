@@ -11,8 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.shephertz.app42.paas.sdk.android.App42API;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,10 +24,6 @@ import java.util.Random;
 
 public class MainActivity2 extends Activity {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4a2786b08a60d72670658880b17041b1d9a1da01
     Button butt1 ;
     Button butt2 ;
     Button butt3 ;
@@ -138,7 +132,6 @@ public class MainActivity2 extends Activity {
         butt3.setOnClickListener(new btn3OnClick());
         butt4.setOnClickListener(new btn4OnClick());
 
-        App42API.initialize(this,"46301e5ea46a6e878160f7548b56b2ef06c4868cd18f2508a33aeabaa619de82","cbe1369b0fdca4079e6b3458e40a21775ac2ca9a8b72e4460dc53424c2c4c1a9");
 
     }
 

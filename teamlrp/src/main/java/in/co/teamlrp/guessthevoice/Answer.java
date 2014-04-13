@@ -35,7 +35,7 @@ public class Answer extends Activity {
 
         }
         else {
-            //score=score+10;
+
             answer.setText("OMG, it's Right!"+" You get +10");
 
 
@@ -47,7 +47,7 @@ public class Answer extends Activity {
 
 
                 Intent i = new Intent(getApplicationContext(), MainActivity2.class);
-            //    intent.putExtra("Score", score);
+
                 startActivity(i);
 
             }

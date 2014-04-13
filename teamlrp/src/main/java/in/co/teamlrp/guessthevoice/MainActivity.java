@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.shephertz.app42.paas.sdk.android.App42API;
+
 
 public class MainActivity extends Activity {
 
@@ -22,7 +24,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    EditText usrnm = (EditText) findViewById(R.id.username);
+        App42API.initialize(this, "46301e5ea46a6e878160f7548b56b2ef06c4868cd18f2508a33aeabaa619de82", "cbe1369b0fdca4079e6b3458e40a21775ac2ca9a8b72e4460dc53424c2c4c1a9");
+
+        EditText usrnm = (EditText) findViewById(R.id.username);
         Scoring.username = String.valueOf(usrnm.getText());
 
         // MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.letsgetstarted);
