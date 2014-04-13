@@ -82,27 +82,27 @@ public class MainActivity2 extends Activity {
         try {
 
             JSONObject object = new JSONObject(loadJSONFromAsset());
-            JSONArray jsonArray = object.getJSONArray("hindi");
+            JSONArray jsonArray = object.getJSONArray("englishMale");
 
 
-            i = random.nextInt(9);
+            i = random.nextInt(8);
             option1 = jsonArray.getJSONObject(i).getString("name");
             j = i;
-            i = random.nextInt(9);
+            i = random.nextInt(8);
             while (i == j) {
-                i = random.nextInt(9);
+                i = random.nextInt(8);
             }
             option2 = jsonArray.getJSONObject(i).getString("name");
             k = i;
             while (i == j || i == k) {
-                i = random.nextInt(9);
+                i = random.nextInt(8);
             }
 
 
             option3 = jsonArray.getJSONObject(i).getString("name");
             l = i;
             while (i == j || i == k || i == l) {
-                i = random.nextInt(9);
+                i = random.nextInt(8);
             }
             option4 = jsonArray.getJSONObject(i).getString("name");
 
