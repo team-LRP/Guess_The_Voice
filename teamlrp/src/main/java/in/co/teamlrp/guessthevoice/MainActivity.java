@@ -2,9 +2,7 @@ package in.co.teamlrp.guessthevoice;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,8 +23,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 
-        MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.letsgetstarted);
-        mPlayer.start();
+        // MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.letsgetstarted);
+        //mPlayer.start();
 
         button = (Button) findViewById(R.id.singleplayerbutton);
 
@@ -35,28 +33,25 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
 
 
-
                 //delay in ms
-                int DELAY = 1700;
+                //int DELAY = 1700;
 
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-                        startActivity(intent);
-                    }
-                }, DELAY);
-
-
-
-
+                //Handler handler = new Handler();
+                //handler.postDelayed(new Runnable() {
+                // @Override
+                //  public void run() {
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+                //    }
+                //  }, DELAY);
             }
 
 
         });
-
     }
+
+
+
 
 
     @Override
