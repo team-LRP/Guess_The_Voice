@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.shephertz.app42.paas.sdk.android.App42API;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,9 +21,13 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
-//Hi Mean
+
 
 public class MainActivity2 extends Activity {
+
+
+
+
 
 
     Button butt1 ;
@@ -127,6 +133,7 @@ public class MainActivity2 extends Activity {
         butt3.setOnClickListener(new btn3OnClick());
         butt4.setOnClickListener(new btn4OnClick());
 
+        App42API.initialize(this,"46301e5ea46a6e878160f7548b56b2ef06c4868cd18f2508a33aeabaa619de82","cbe1369b0fdca4079e6b3458e40a21775ac2ca9a8b72e4460dc53424c2c4c1a9");
 
     }
 

@@ -29,6 +29,10 @@
             android:name="in.co.teamlrp.guessthevoice.Answer"
             android:label="@string/title_activity_answer" >
         </activity>
+        <activity
+            android:name="in.co.teamlrp.guessthevoice.FinalResult"
+            android:label="@string/title_activity_final_result" >
+        </activity>
     </application>
 
 </manifest>

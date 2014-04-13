@@ -2,7 +2,7 @@ apply plugin: 'android'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19.0.0"
+    buildToolsVersion '19.0.0'
 
     defaultConfig {
         minSdkVersion 14
@@ -20,6 +20,5 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-
-
+    compile files('build/rs/debug/lib/App42_ANDROID_SDK_2.5.jar')
 }

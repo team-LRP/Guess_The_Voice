@@ -7,5 +7,6 @@
     <string name="title_activity_main_activity2">MainActivity2</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="title_activity_answer">Answer</string>
+    <string name="title_activity_final_result">FinalResult</string>
 
 </resources>

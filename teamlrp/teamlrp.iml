@@ -70,6 +70,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="App42_ANDROID_SDK_2.5" level="project" />
   </component>
 </module>
 

@@ -11,9 +11,8 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-    /* Good morning gentlemen, we have gathered here for a cause, and our aim is to complete our task with utmost concentration and intensity, because
-    those who are crazy enough to think they can change the world are actually the ones who change the world"
-     */
+
+
 
    Button button ;
 
