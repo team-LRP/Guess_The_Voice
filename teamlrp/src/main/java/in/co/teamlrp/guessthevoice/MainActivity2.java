@@ -24,7 +24,6 @@ import java.util.Random;
 
 public class MainActivity2 extends Activity {
 
-    int score;
     Button butt1 ;
     Button butt2 ;
     Button butt3 ;
@@ -37,6 +36,7 @@ public class MainActivity2 extends Activity {
     TextView display;
     String randomArray;
     String array[] = {"femaleEnglish","maleEnglish","hindi"};
+    Scoring score;
 
     int right_ans;
     int i=0,j=0,k=0,l=0;
@@ -57,7 +57,7 @@ public class MainActivity2 extends Activity {
         //score = intentscore.getIntExtra("Score", score);
 
         display = (TextView)findViewById(R.id.score);
-        display.setText("Your Score is "+score);
+       display.setText("Your Score is "+score.Score);
 
 
         butt1 = (Button) findViewById(R.id.button1);
@@ -144,7 +144,7 @@ public class MainActivity2 extends Activity {
             if (right_ans == j) {
                 cas = 1;
 
-                score = score+10;
+              score.Score  = score.Score +10;
 
             }
             intent = new Intent(getApplicationContext(), Answer.class);
@@ -162,10 +162,12 @@ public class MainActivity2 extends Activity {
         public void onClick(View view) {
             if (right_ans == k) {
                 cas = 1;
-                score = score+10;
+                score.Score  = score.Score +10;
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
+
+            startActivity(intent);
               m.stop();
             startActivity(intent);
 
@@ -180,7 +182,7 @@ public class MainActivity2 extends Activity {
             if (right_ans == l) {
                 cas = 1;
 
-                score = score+10;
+                score.Score  = score.Score +10;
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
@@ -200,7 +202,8 @@ public class MainActivity2 extends Activity {
             if (right_ans == i) {
                 cas = 1;
 
-                score = score+10;
+
+                score.Score  = score.Score +10;
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);

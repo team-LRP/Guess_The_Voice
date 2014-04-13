@@ -13,7 +13,6 @@
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:id="@+id/button2"
-android:textSize="20dp"
         android:textColor="#ffffff"
 android:layout_alignTop="@+id/button1"
 android:layout_alignLeft="@+id/button4"
@@ -29,7 +28,6 @@ android:layout_alignStart="@+id/button4"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:id="@+id/button1"
-    android:textSize="20dp"
 
     android:textColor="#ffffff"
 android:layout_centerVertical="true"
@@ -43,14 +41,13 @@ android:layout_alignStart="@+id/button3"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:id="@+id/button3"
-    android:textSize="20dp"
 
 
 android:layout_alignTop="@+id/button4"
 android:layout_alignParentLeft="true"
 android:layout_alignParentStart="true"
     android:textColor="#ffffff"
-android:layout_marginLeft="10dp"
+android:layout_marginLeft="1dp"
     android:onClick="btn3OnClick" />
 
 
@@ -65,7 +62,7 @@ android:layout_alignParentBottom="true"
 android:layout_alignParentRight="true"
 android:layout_alignParentEnd="true"
     android:textColor="#ffffff"
-android:layout_marginRight="10dp"
+android:layout_marginRight="1dp"
 android:layout_marginBottom="129dp"
     android:onClick="btn4OnClick" />
 
