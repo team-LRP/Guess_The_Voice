@@ -5,6 +5,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/answer"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="in.co.teamlrp.guessthevoice.Answer">
 
@@ -14,8 +15,11 @@
         android:layout_height="wrap_content"
         android:text="Continue"
         android:id="@+id/cont"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/answer"
+        android:layout_alignStart="@+id/answer"
+        android:layout_marginBottom="163dp"
+        android:textSize="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +27,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/answer"
-        android:layout_above="@+id/cont"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="115dp" />
+        android:layout_marginTop="44dp"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

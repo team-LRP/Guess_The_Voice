@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.shephertz.app42.paas.sdk.android.App42API;
 
@@ -25,11 +26,14 @@ import java.util.Random;
 
 public class MainActivity2 extends Activity {
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 7b86f8089768aaf17756abfb83f47cf047809fd3
     Button butt1 ;
     Button butt2 ;
     Button butt3 ;
@@ -39,9 +43,10 @@ public class MainActivity2 extends Activity {
     String option2 ;
     String option3 ;
     String option4 ;
-
+    TextView display;
     String randomArray;
-    String array[] = {"femaleEnglish","maleEnglish","femaleHindi","maleHindi"};
+    String array[] = {"femaleEnglish","maleEnglish","hindi"};
+    Scoring score;
 
     int right_ans;
     int i=0,j=0,k=0,l=0;
@@ -51,13 +56,18 @@ public class MainActivity2 extends Activity {
     String id="";
     MediaPlayer m;
     String file;
-    int arraghav[] = new int[]{R.raw.jimparson, R.raw.bryan, R.raw.bryan, R.raw.robertdowny, R.raw.jimparson, R.raw.neilharris, R.raw.heathledger, R.raw.heathledger};
+    int arraghav[] = new int[]{R.raw.aamir, R.raw.amitabh, R.raw.bomanirani, R.raw.deepika, R.raw.kajol, R.raw.kapil, R.raw.kareena, R.raw.pareshrawal, R.raw.salman};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        //Intent intentscore = getIntent();
+        //score = intentscore.getIntExtra("Score", score);
+
+        display = (TextView)findViewById(R.id.score);
+       display.setText("Your Score is "+score.Score);
 
 
         butt1 = (Button) findViewById(R.id.button1);
@@ -75,7 +85,7 @@ public class MainActivity2 extends Activity {
 
 
         Random random = new Random();
-        randomArray = array[random.nextInt(4)];
+        randomArray = array[random.nextInt(3)];
 
         ArrayList<Integer> arr = new ArrayList<Integer>();
 
@@ -83,27 +93,27 @@ public class MainActivity2 extends Activity {
         try {
 
             JSONObject object = new JSONObject(loadJSONFromAsset());
-            JSONArray jsonArray = object.getJSONArray("maleEnglish");
+            JSONArray jsonArray = object.getJSONArray("hindi");
 
 
-            i = random.nextInt(8);
+            i = random.nextInt(9);
             option1 = jsonArray.getJSONObject(i).getString("name");
             j = i;
-            i = random.nextInt(8);
+            i = random.nextInt(9);
             while (i == j) {
-                i = random.nextInt(8);
+                i = random.nextInt(9);
             }
             option2 = jsonArray.getJSONObject(i).getString("name");
             k = i;
             while (i == j || i == k) {
-                i = random.nextInt(8);
+                i = random.nextInt(9);
             }
 
 
             option3 = jsonArray.getJSONObject(i).getString("name");
             l = i;
             while (i == j || i == k || i == l) {
-                i = random.nextInt(8);
+                i = random.nextInt(9);
             }
             option4 = jsonArray.getJSONObject(i).getString("name");
 
@@ -144,6 +154,9 @@ public class MainActivity2 extends Activity {
         public void onClick(View view) {
             if (right_ans == j) {
                 cas = 1;
+
+              score.Score  = score.Score +10;
+
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
@@ -160,9 +173,12 @@ public class MainActivity2 extends Activity {
         public void onClick(View view) {
             if (right_ans == k) {
                 cas = 1;
+                score.Score  = score.Score +10;
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
+
+            startActivity(intent);
               m.stop();
             startActivity(intent);
 
@@ -176,6 +192,8 @@ public class MainActivity2 extends Activity {
         public void onClick(View view) {
             if (right_ans == l) {
                 cas = 1;
+
+                score.Score  = score.Score +10;
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);
@@ -194,6 +212,9 @@ public class MainActivity2 extends Activity {
         public void onClick(View view) {
             if (right_ans == i) {
                 cas = 1;
+
+
+                score.Score  = score.Score +10;
             }
             intent = new Intent(getApplicationContext(), Answer.class);
             intent.putExtra("Cas_value", cas);

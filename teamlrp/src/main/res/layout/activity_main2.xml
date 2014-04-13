@@ -6,14 +6,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/bcg"
     tools:context="in.co.teamlrp.guessthevoice.MainActivity2">
 
     <Button
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:id="@+id/button2"
-android:textSize="20dp"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
 android:layout_alignTop="@+id/button1"
 android:layout_alignLeft="@+id/button4"
 android:layout_alignStart="@+id/button4"
@@ -28,9 +28,8 @@ android:layout_alignStart="@+id/button4"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:id="@+id/button1"
-    android:textSize="20dp"
 
-    android:textColor="#000000"
+    android:textColor="#ffffff"
 android:layout_centerVertical="true"
 android:layout_alignLeft="@+id/button3"
 android:layout_alignStart="@+id/button3"
@@ -42,13 +41,13 @@ android:layout_alignStart="@+id/button3"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:id="@+id/button3"
-    android:textSize="20dp"
 
 
 android:layout_alignTop="@+id/button4"
 android:layout_alignParentLeft="true"
 android:layout_alignParentStart="true"
-android:layout_marginLeft="10dp"
+    android:textColor="#ffffff"
+android:layout_marginLeft="1dp"
     android:onClick="btn3OnClick" />
 
 
@@ -62,7 +61,8 @@ android:id="@+id/button4"
 android:layout_alignParentBottom="true"
 android:layout_alignParentRight="true"
 android:layout_alignParentEnd="true"
-android:layout_marginRight="10dp"
+    android:textColor="#ffffff"
+android:layout_marginRight="1dp"
 android:layout_marginBottom="129dp"
     android:onClick="btn4OnClick" />
 
@@ -82,5 +82,17 @@ android:layout_marginBottom="129dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/score"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/display"/>
 
 </RelativeLayout>
