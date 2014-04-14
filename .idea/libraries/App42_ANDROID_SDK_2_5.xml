@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="App42_ANDROID_SDK_2.5">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/teamlrp/libs/App42_ANDROID_SDK_2.5.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

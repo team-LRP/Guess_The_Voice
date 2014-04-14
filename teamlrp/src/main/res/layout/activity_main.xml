@@ -46,5 +46,5 @@ android:id="@+id/leaderboardbutton"
         android:layout_above="@+id/singleplayerbutton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="96dp"
-        android:text="Roalts" />
+        android:text="username" />
 </RelativeLayout>

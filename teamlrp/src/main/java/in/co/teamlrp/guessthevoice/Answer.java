@@ -2,6 +2,7 @@ package in.co.teamlrp.guessthevoice;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 public class Answer extends Activity {
 
 
+    MediaPlayer mPlayer2;
 
     int a1, b1=0;
 
@@ -21,6 +23,11 @@ public class Answer extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer);
+
+
+        mPlayer2 = MediaPlayer.create(this, R.raw.omg);
+        mPlayer2.start();
+
         TextView answer = (TextView)findViewById(R.id.answer);
 
         final Intent intent = getIntent();
@@ -32,6 +39,7 @@ public class Answer extends Activity {
 
             gameover = new Intent(this, FinalResult.class);
             startActivity(gameover);
+            mPlayer2.stop();
 
         }
         else {
@@ -47,7 +55,7 @@ public class Answer extends Activity {
 
 
                 Intent i = new Intent(getApplicationContext(), MainActivity2.class);
-
+                mPlayer2.stop();
                 startActivity(i);
 
             }

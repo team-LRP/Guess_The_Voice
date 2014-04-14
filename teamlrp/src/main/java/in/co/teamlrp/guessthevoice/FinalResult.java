@@ -2,6 +2,7 @@ package in.co.teamlrp.guessthevoice;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,8 @@ import java.math.BigDecimal;
 
 public class FinalResult extends Activity {
 
+    MediaPlayer mPlayer3;
+
     String gamename = "Guess the voice";
 
     BigDecimal score = new BigDecimal(Scoring.Score);
@@ -33,6 +36,10 @@ public class FinalResult extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_result);
 
+
+        mPlayer3 = MediaPlayer.create(this, R.raw.tryagain);
+        mPlayer3.start();
+
         ScoreBoardService scoreBoardService= App42API.buildScoreBoardService();
        // txt = (TextView)findViewById(R.id.textView);
         Toast.makeText(getBaseContext(),"Congratulations " + Scoring.username + " your score is " + Scoring.Score, Toast.LENGTH_SHORT).show();
@@ -43,6 +50,7 @@ public class FinalResult extends Activity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                mPlayer3.pause();
 
             }
         });
