@@ -45,7 +45,7 @@ public class MainActivity2 extends Activity {
     String id="";
     MediaPlayer m;
     String file;
-    int arraghav[] = new int[]{R.raw.aamir, R.raw.amitabh, R.raw.bomanirani, R.raw.deepika, R.raw.kajol, R.raw.kapil, R.raw.kareena, R.raw.pareshrawal, R.raw.salman};
+    int arraghav[] = new int[]{R.raw.johnydepp,R.raw.bryan, R.raw.aaron, R.raw.robertdowny, R.raw.jimparson, R.raw.neilharris, R.raw.benedict, R.raw.heathledger};
 
 
     @Override
@@ -82,7 +82,7 @@ public class MainActivity2 extends Activity {
         try {
 
             JSONObject object = new JSONObject(loadJSONFromAsset());
-            JSONArray jsonArray = object.getJSONArray("englishMale");
+            JSONArray jsonArray = object.getJSONArray("maleEnglish");
 
 
             i = random.nextInt(8);
